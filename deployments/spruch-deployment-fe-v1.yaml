@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: spruch-frontend
+  name: spruch-frontend
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: spruch-frontend
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: spruch-frontend
+    spec:
+      containers:
+      - image: spruch-frontend
+        name: spruch-frontend
+        imagePullPolicy: IfNotPresent
+        env:
+        - name: IS_PROD
+          value: "1"
+        - name: QUOTE_ENDPOINT_URL
+          value: "http://spruch-ip-svc/quote"
+        resources: {}
+status: {}

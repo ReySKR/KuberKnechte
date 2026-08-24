@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: spruch-backend
+  name: spruch-backend
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: spruch-backend
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: spruch-backend
+    spec:
+      containers:
+      - image: spruch-backend:latest
+        name: spruch-backend
+        imagePullPolicy: IfNotPresent
+        env:
+        - name: IS_PROD
+          value: "1"
+        - name: QUOTE_PATH
+          value: "./assets/spruch.json"
+        volumeMounts:
+          - name: spruch-config
+            mountPath: /app/assets
+        resources: {}
+      volumes:
+        - name: spruch-config
+          configMap:
+            name: spruch-config
+status: {}

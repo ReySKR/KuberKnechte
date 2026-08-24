@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: spruch-ip-svc
+  name: spruch-ip-svc
+spec:
+  ports:
+  - name: "80"
+    port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app: spruch-backend
+  type: ClusterIP
+status:
+  loadBalancer: {}
