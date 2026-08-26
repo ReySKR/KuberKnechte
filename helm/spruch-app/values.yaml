@@ -1,0 +1,26 @@
+backend:
+  replicaCount: 3
+  image:
+    repository: spruch-backend
+    tag: latest
+    pullPolicy: IfNotPresent
+  service:
+    type: ClusterIP
+    port: 80
+    targetPort: 80
+  env:
+    isProd: "1"
+    quotePath: "./assets/spruch.json"
+
+frontend:
+  replicaCount: 3
+  image:
+    repository: spruch-frontend
+    tag: latest
+    pullPolicy: IfNotPresent
+  service:
+    type: NodePort
+    port: 80
+    targetPort: 8501
+  env:
+    isProd: "1"

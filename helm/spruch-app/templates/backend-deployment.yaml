@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}-backend
+  labels:
+    app: spruch-backend
+    {{- include "spruch-app.labels" . | nindent 4 }}
+spec:
+  replicas: {{ .Values.backend.replicaCount }}
+  selector:
+    matchLabels:
+      app: spruch-backend
+      app.kubernetes.io/instance: {{ .Release.Name }}
+  template:
+    metadata:
+      labels:
+        app: spruch-backend
+        app.kubernetes.io/instance: {{ .Release.Name }}
+    spec:
+      containers:
+        - name: spruch-backend
+          image: "{{ .Values.backend.image.repository }}:{{ .Values.backend.image.tag }}"
+          imagePullPolicy: {{ .Values.backend.image.pullPolicy }}
+          env:
+            - name: IS_PROD
+              value: {{ .Values.backend.env.isProd | quote }}
+            - name: QUOTE_PATH
+              value: {{ .Values.backend.env.quotePath | quote }}
+          volumeMounts:
+            - name: spruch-config
+              mountPath: /app/assets
+      volumes:
+        - name: spruch-config
+          configMap:
+            name: {{ .Release.Name }}-spruch-config

@@ -1,0 +1,6 @@
+apiVersion: v2
+name: spruch-app
+description: Helm Chart fuer die Spruch-Applikation (Frontend & Backend API)
+type: application
+version: 0.1.0
+appVersion: "1.0.0"
