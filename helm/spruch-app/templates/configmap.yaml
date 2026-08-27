@@ -1,0 +1,260 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Release.Name }}-spruch-config
+data:
+  spruch.json: |-
+    {
+      "quotes": [
+        {
+          "id": 1,
+          "quote": "Gib niemals auf. Es sei denn, es ist zu anstrengend, dann bleib einfach liegen.",
+          "category": "Alltag"
+        },
+        {
+          "id": 2,
+          "quote": "Jeder Tag ist eine neue Chance, genau die gleichen Fehler noch einmal zu machen.",
+          "category": "Persönlichkeitsentwicklung"
+        },
+        {
+          "id": 3,
+          "quote": "Es wird nicht besser, man gewöhnt sich nur an das Niveau.",
+          "category": "Lebenseinstellung"
+        },
+        {
+          "id": 4,
+          "quote": "Wenn du denkst, es geht nicht mehr, kommt von irgendwo ein noch größeres Problem her.",
+          "category": "Optimismus"
+        },
+        {
+          "id": 5,
+          "quote": "Folge deinen Träumen. Geh wieder schlafen.",
+          "category": "Karriere"
+        },
+        {
+          "id": 6,
+          "quote": "Wer am Boden liegt, kann wenigstens nicht mehr tief fallen – dachten wir.",
+          "category": "Realismus"
+        },
+        {
+          "id": 7,
+          "quote": "Der frühe Vogel kann mich mal.",
+          "category": "Morgenroutine"
+        },
+        {
+          "id": 8,
+          "quote": "Träume nicht dein Leben, sondern schlaf einfach weiter.",
+          "category": "Schlaf"
+        },
+        {
+          "id": 9,
+          "quote": "Hard work pays off in the future. Laziness pays off right now.",
+          "category": "Produktivität"
+        },
+        {
+          "id": 10,
+          "quote": "Am Ende des Tunnels brennt kein Licht, das ist der Gegenzug.",
+          "category": "Perspektive"
+        },
+        {
+          "id": 11,
+          "quote": "Du bist nicht faul, du bist im Energiesparmodus.",
+          "category": "Energie"
+        },
+        {
+          "id": 12,
+          "quote": "Versuch es gar nicht erst. Erspart Enttäuschungen.",
+          "category": "Erfolg"
+        },
+        {
+          "id": 13,
+          "quote": "Dein Potenzial ist grenzenlos – genau wie deine Fähigkeit, es zu verschwenden.",
+          "category": "Potenzial"
+        },
+        {
+          "id": 14,
+          "quote": "Heute ist der erste Tag vom Rest deines schlechten Zeitmanagements.",
+          "category": "Zeitmanagement"
+        },
+        {
+          "id": 15,
+          "quote": "Die Komfortzone heißt nicht umsonst so. Bleib gefälligst drin.",
+          "category": "Komfortzone"
+        },
+        {
+          "id": 16,
+          "quote": "Lächle, solange du noch Zähne hast – die Probleme kommen trotzdem.",
+          "category": "Optimismus"
+        },
+        {
+          "id": 17,
+          "quote": "Wer später bremst, ist länger schnell – wer gar nicht losfährt, spart Sprit.",
+          "category": "Mobilität"
+        },
+        {
+          "id": 18,
+          "quote": "Das Geheimnis des Erfolgs? Frag jemanden, der ihn hat.",
+          "category": "Erfolg"
+        },
+        {
+          "id": 19,
+          "quote": "Teamarbeit bedeutet: Toll, ein anderer macht's. Bis es keiner macht.",
+          "category": "Arbeit"
+        },
+        {
+          "id": 20,
+          "quote": "Man muss auch mal aufgeben können, bevor es peinlich wird.",
+          "category": "Selbsterkenntnis"
+        },
+        {
+          "id": 21,
+          "quote": "Ein Tag ohne Lächeln ist ein verlorener Tag. Ein Tag mit Lächeln ändert aber auch nichts.",
+          "category": "Lebensfreude"
+        },
+        {
+          "id": 22,
+          "quote": "Glaube an dich selbst – die anderen tun es schließlich auch nicht.",
+          "category": "Selbstvertrauen"
+        },
+        {
+          "id": 23,
+          "quote": "Es gibt kein Problem, das man durch Nichtstun nicht noch verkomplizieren könnte.",
+          "category": "Prokrastination"
+        },
+        {
+          "id": 24,
+          "quote": "Motivation ist wie Baden: Hält nicht lange, ist aber meistens auch überbewertet.",
+          "category": "Motivation"
+        },
+        {
+          "id": 25,
+          "quote": "Der Weg ist das Ziel – und der Weg ist voller Baustellen und Umleitungen.",
+          "category": "Zielstrebigkeit"
+        },
+        {
+          "id": 26,
+          "quote": "Warum heute verschieben, was man auch übermorgen noch bereuen kann?",
+          "category": "Prokrastination"
+        },
+        {
+          "id": 27,
+          "quote": "Überquere die Brücke erst, wenn du sie erreichst. Oder verbrenne sie einfach vorher.",
+          "category": "Strategie"
+        },
+        {
+          "id": 28,
+          "quote": "Es ist nie zu spät, aufzugeben.",
+          "category": "Durchhaltevermögen"
+        },
+        {
+          "id": 29,
+          "quote": "Kopf hoch! Das Wasser steht uns zwar bis zum Hals, aber sinken geht noch.",
+          "category": "Krisenmanagement"
+        },
+        {
+          "id": 30,
+          "quote": "Du bist ein einzigartiges Unikat – genau wie Milliarden anderer auch.",
+          "category": "Individualität"
+        },
+        {
+          "id": 31,
+          "quote": "Wenn Plan A nicht funktioniert, vergiss das Alphabet.",
+          "category": "Planung"
+        },
+        {
+          "id": 32,
+          "quote": "Wer kämpft, kann verlieren. Wer nicht kämpft, hat schon Feierabend.",
+          "category": "Work-Life-Balance"
+        },
+        {
+          "id": 33,
+          "quote": "Aus Fehlern lernt man. Du solltest inzwischen promoviert sein.",
+          "category": "Lernkurve"
+        },
+        {
+          "id": 34,
+          "quote": "Erwartungen niedrig halten schützt vor bösen Überraschungen.",
+          "category": "Risikomanagement"
+        },
+        {
+          "id": 35,
+          "quote": "Das Glas ist weder halb voll noch halb leer – es hat einfach einen Sprung.",
+          "category": "Perspektive"
+        },
+        {
+          "id": 36,
+          "quote": "Schlimmer geht immer. Verlass dich drauf.",
+          "category": "Prognose"
+        },
+        {
+          "id": 37,
+          "quote": "Du bist nicht verloren, du bist nur auf einem Umweg ins Nirgendwo.",
+          "category": "Orientierung"
+        },
+        {
+          "id": 38,
+          "quote": "Wer morgens zerknittert aufsteht, hat tagsüber mehr Entfaltungsmöglichkeiten – theoretisch.",
+          "category": "Morgenroutine"
+        },
+        {
+          "id": 39,
+          "quote": "Erfolg ist eine Treppe, keine Rolltreppe. Und die Treppe ist gesperrt wegen Einsturzgefahr.",
+          "category": "Karriere"
+        },
+        {
+          "id": 40,
+          "quote": "Hinter jeder Wolke scheint die Sonne. Blöd nur, wenn es eine permanente Gewitterfront ist.",
+          "category": "Wetter & Laune"
+        },
+        {
+          "id": 41,
+          "quote": "Selbst wenn du das Rennen der Ratten gewinnst, bleibst du immer noch eine Ratte.",
+          "category": "Wettbewerb"
+        },
+        {
+          "id": 42,
+          "quote": "Aufgeschoben ist nicht aufgehoben – aber oft vergessen.",
+          "category": "Prokrastination"
+        },
+        {
+          "id": 43,
+          "quote": "Alles hat ein Ende, nur deine To-Do-Liste hat keins.",
+          "category": "Produktivität"
+        },
+        {
+          "id": 44,
+          "quote": "Veränderung beginnt im Kopf – und bleibt meistens auch genau da.",
+          "category": "Wandel"
+        },
+        {
+          "id": 45,
+          "quote": "Der Schlüssel zum Erfolg passt selten in dein Schloss.",
+          "category": "Chancen"
+        },
+        {
+          "id": 46,
+          "quote": "Setze dir keine Ziele, dann kannst du auch nicht scheitern.",
+          "category": "Zielsetzung"
+        },
+        {
+          "id": 47,
+          "quote": "Nur tote Fische schwimmen mit dem Strom. Lebendige Fische ertrinken wenigstens nicht im Stress.",
+          "category": "Konformität"
+        },
+        {
+          "id": 48,
+          "quote": "Was du heute kannst besorgen, verschiebe ruhig auf morgen – vielleicht erledigt es sich von selbst.",
+          "category": "Zeitmanagement"
+        },
+        {
+          "id": 49,
+          "quote": "Niemand ist nutzlos. Man kann immer noch als schlechtes Vorbild dienen.",
+          "category": "Vorbildfunktion"
+        },
+        {
+          "id": 50,
+          "quote": "Morgen wird alles besser. Und wenn nicht morgen, dann übermorgen auch nicht.",
+          "category": "Hoffnung"
+        }
+      ]
+    }
